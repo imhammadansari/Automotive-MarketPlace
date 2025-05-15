@@ -65,14 +65,14 @@ const SimilarVehicles = ({ vehName, vehMake }) => {
         },
     }}
     modules={[Pagination]}
-    className="mySwiper h-[28rem]"
+    className="mySwiper h-auto"
 >
                         {similarVeh?.map(vehicle => {
                             const base64Image = Buffer.from(vehicle.thumbnail.data).toString('base64');
                             return (
                                 <SwiperSlide key={vehicle._id}>
-                                    <div className='flex flex-col gap-2 px-2 md:px-4 py-2 md:py-4 rounded-md border border-black/10'>
-                                        <div className='flex items-center h-56 justify-center'>
+                                    <div className='flex flex-col h-auto gap-2 px-2 md:px-4 py-2 md:py-4 rounded-md border border-black/10'>
+                                        <div className='flex items-center h-auto justify-center'>
                                             <img className='w-[16rem] md:w-[16rem]' src={`data:image/jpeg;base64,${base64Image}`} />
                                         </div>
 

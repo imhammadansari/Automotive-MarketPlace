@@ -122,12 +122,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Vehicle Name:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setvehName(e.target.value)} type='text' required />
+              <input value={name} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setvehName(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Registration City:</h1>
-              <input className='w-full rounded-md h-8 px-2 border border-black' onChange={(e) => setCity(e.target.value)} type='text' required />
+              <input value={city} className='w-full rounded-md h-8 px-2 border border-black' onChange={(e) => setCity(e.target.value)} type='text' required />
             </div>
 
           </div>
@@ -137,12 +137,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Owner's Name:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setOwnerName(e.target.value)} type='text' required />
+              <input value={ownerName} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setOwnerName(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Owner's Phone Number:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setPhoneNumber(e.target.value)} type='number' required />
+              <input value={phoneNumber} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setPhoneNumber(e.target.value)} type='number' required />
             </div>
 
           </div>
@@ -153,12 +153,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Vehicle Make:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setMake(e.target.value)} type='text' required />
+              <input value={make} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setMake(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Vehicle Model:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setvehModel(e.target.value)} type='text' required />
+              <input value={model} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setvehModel(e.target.value)} type='text' required />
             </div>
 
           </div>
@@ -168,12 +168,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Vehicle Mileage:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setmileage(e.target.value)} type='text' required />
+              <input value={mileage} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setmileage(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Vehicle Engine:</h1>
-              <input className='w-full rounded-md h-8 px-2 border border-black' onChange={(e) => setengine(e.target.value)} type='text' required />
+              <input value={engine} className='w-full rounded-md h-8 px-2 border border-black' onChange={(e) => setengine(e.target.value)} type='text' required />
             </div>
 
           </div>
@@ -183,7 +183,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Fuel Type:</h1>
-              <select onChange={(e) => setfuelType(e.target.value)} className='w-full rounded-md py-1 border border-black'>
+              <select value={fuelType} onChange={(e) => setfuelType(e.target.value)} className='w-full rounded-md py-1 border border-black'>
                 <option>Select Fuel Type</option>
                 <option>Petrol</option>
                 <option>Diesel</option>
@@ -193,7 +193,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Vehicle Condition:</h1>
-              <select onChange={(e) => setcondition(e.target.value)} className='w-full rounded-md py-1 border border-black'>
+              <select value={condition} onChange={(e) => setcondition(e.target.value)} className='w-full rounded-md py-1 border border-black'>
                 <option>Select Vehicle Condition</option>
                 <option>New</option>
                 <option>Old</option>
@@ -207,12 +207,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Vehicle Color:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setColor(e.target.value)} type='text' required />
+              <input value={color} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setColor(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>KM's Driven:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setOdometer(e.target.value)} type='text' required />
+              <input value={odometer} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setOdometer(e.target.value)} type='text' required />
             </div>
 
           </div>
@@ -222,7 +222,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Vehicle Seats:</h1>
-              <select onChange={(e) => setvehSeats(e.target.value)} className='w-full rounded-md py-1 border border-black'>
+              <select value={seats} onChange={(e) => setvehSeats(e.target.value)} className='w-full rounded-md py-1 border border-black'>
                 <option>Select Vehicle Seats</option>
                 <option>2</option>
                 <option>4</option>
@@ -232,7 +232,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Vehicle Hybrid:</h1>
-              <select onChange={(e) => sethybrid(e.target.value)} className='w-full rounded-md py-1 border border-black'>
+              <select value={hybrid} onChange={(e) => sethybrid(e.target.value)} className='w-full rounded-md py-1 border border-black'>
                 <option>Select Hybrid</option>
                 <option>Yes</option>
                 <option>No</option>
@@ -246,12 +246,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Fuel Tank Capacity:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setFuelTankCapacity(e.target.value)} type='text' required />
+              <input value={fuelTankCapacity} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setFuelTankCapacity(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-2/4 gap-1'>
               <h1 className='font-medium'>Vehicle Transmission:</h1>
-              <select onChange={(e) => setTransmission(e.target.value)} className='w-full rounded-md py-1 border border-black'>
+              <select value={transmission} onChange={(e) => setTransmission(e.target.value)} className='w-full rounded-md py-1 border border-black'>
                 <option>Select Transmission</option>
                 <option>Manual</option>
                 <option>Automatic</option>
@@ -266,7 +266,7 @@ const SellCarFieldsPage = () => {
 
 <div className='flex flex-col w-full gap-1'>
   <h1 className='font-medium'>Vehicle Price:</h1>
-  <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setprice(e.target.value)} type='nummber' required />
+  <input value={price} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setprice(e.target.value)} type='nummber' required />
 </div>
 
 </div>
@@ -276,7 +276,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Description:</h1>
-              <textarea rows={5} className='rounded-md p-2 border border-black' onChange={(e) => setDescription(e.target.value)} type='text' required></textarea>
+              <textarea value={description} rows={5} className='rounded-md p-2 border border-black' onChange={(e) => setDescription(e.target.value)} type='text' required></textarea>
             </div>
 
           </div>
@@ -316,12 +316,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Name:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setvehName(e.target.value)} type='text' required />
+              <input value={name} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setvehName(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Registration City:</h1>
-              <input className='w-full rounded-md h-8 px-2 border border-black' onChange={(e) => setCity(e.target.value)} type='text' required />
+              <input value={city} className='w-full rounded-md h-8 px-2 border border-black' onChange={(e) => setCity(e.target.value)} type='text' required />
             </div>
 
           </div>
@@ -331,12 +331,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Owner's Name:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setOwnerName(e.target.value)} type='text' required />
+              <input value={ownerName} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setOwnerName(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Owner's Phone Number:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setPhoneNumber(e.target.value)} type='text' required />
+              <input value={phoneNumber} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setPhoneNumber(e.target.value)} type='text' required />
             </div>
 
           </div>
@@ -346,12 +346,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Make:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setMake(e.target.value)} type='text' required />
+              <input value={make} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setMake(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Model:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setvehModel(e.target.value)} type='text' required />
+              <input value={model} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setvehModel(e.target.value)} type='text' required />
             </div>
 
           </div>
@@ -361,12 +361,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Mileage:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setmileage(e.target.value)} type='text' required />
+              <input value={mileage} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setmileage(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Engine:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setengine(e.target.value)} type='text' required />
+              <input value={engine} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setengine(e.target.value)} type='text' required />
             </div>
 
           </div>
@@ -376,7 +376,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Fuel Type:</h1>
-              <select onChange={(e) => setfuelType(e.target.value)} className='w-full rounded-md py-1 border border-black'>
+              <select value={fuelType} onChange={(e) => setfuelType(e.target.value)} className='w-full rounded-md py-1 border border-black'>
                 <option>Select Fuel Type</option>
                 <option>Petrol</option>
                 <option>Diesel</option>
@@ -386,7 +386,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Condtion:</h1>
-              <select onChange={(e) => setcondition(e.target.value)} className='w-full rounded-md py-1 border border-black'>
+              <select value={condition} onChange={(e) => setcondition(e.target.value)} className='w-full rounded-md py-1 border border-black'>
                 <option>Select Vehicle Condition</option>
                 <option>New</option>
                 <option>Old</option>
@@ -399,12 +399,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Color:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setColor(e.target.value)} type='text' required />
+              <input value={color} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setColor(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>KM's Driven:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setOdometer(e.target.value)} type='text' required />
+              <input value={odometer} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setOdometer(e.target.value)} type='text' required />
             </div>
 
           </div>
@@ -414,7 +414,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Seats:</h1>
-              <select onChange={(e) => setvehSeats(e.target.value)} className='w-full rounded-md py-1 border border-black'>
+              <select value={seats} onChange={(e) => setvehSeats(e.target.value)} className='w-full rounded-md py-1 border border-black'>
                 <option>Select Vehicle Seats</option>
                 <option>2</option>
                 <option>4</option>
@@ -424,7 +424,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Hybrid:</h1>
-              <select onChange={(e) => sethybrid(e.target.value)} className='w-full rounded-md py-1 border border-black'>
+              <select value={hybrid} onChange={(e) => sethybrid(e.target.value)} className='w-full rounded-md py-1 border border-black'>
                 <option>Select Hybrid</option>
                 <option>Yes</option>
                 <option>No</option>
@@ -439,12 +439,12 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Fuel Tank Capacity:</h1>
-              <input className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setFuelTankCapacity(e.target.value)} type='text' required />
+              <input value={fuelTankCapacity} className='w-full rounded-md h-8 p-2 border border-black' onChange={(e) => setFuelTankCapacity(e.target.value)} type='text' required />
             </div>
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Transmission:</h1>
-              <select onChange={(e) => setTransmission(e.target.value)} className='w-full rounded-md py-1 border border-black'>
+              <select value={transmission} onChange={(e) => setTransmission(e.target.value)} className='w-full rounded-md py-1 border border-black'>
                 <option>Select Transmission</option>
                 <option>Manual</option>
                 <option>Automatic</option>
@@ -460,7 +460,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Vehicle Price</h1>
-              <input type='number' name='price' onChange={(e) => {setprice(e.target.value)}} />
+              <input value={price} type='number' name='price' onChange={(e) => {setprice(e.target.value)}} />
             </div>
 
           </div>
@@ -470,7 +470,7 @@ const SellCarFieldsPage = () => {
 
             <div className='flex flex-col w-full gap-1'>
               <h1 className='font-medium'>Description:</h1>
-              <textarea rows={5} className='rounded-md p-2 border border-black' onChange={(e) => setDescription(e.target.value)} type='text' required></textarea>
+              <textarea value={description} rows={5} className='rounded-md p-2 border border-black' onChange={(e) => setDescription(e.target.value)} type='text' required></textarea>
             </div>
 
           </div>

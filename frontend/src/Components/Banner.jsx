@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     // <div className='w-full h-[90vh] bg-cover relative overflow-hidden' 
     //      style={{backgroundImage: "url('/banner.jpg')"}}>
-    <div className='w-full flex flex-col md:flex-row py-4 md:py-6 lg:py-8 px-2 md:px-6 lg:px-8' style={{
+    <div className='w-full min-h-screen flex flex-col md:flex-row py-4 md:py-6 lg:py-8 px-2 md:px-6 lg:px-8' style={{
       background: "linear-gradient(to right, #e8e8ea, #f0f0f1, #ffffff)",
   }}>
       <div className='w-full text-black h-full items-center flex flex-col gap-4 md:flex-row px-2 md:px-6 lg:px-8 xl:px-10'>

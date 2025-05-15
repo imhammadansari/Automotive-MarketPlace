@@ -21,7 +21,7 @@ const AdminLogin = () => {
 
             if(response.status === 200){
                 alert("Admin LoggedIn Successfully");
-                navigate('/home');
+                navigate('/adminDashboard');
             } 
             else if(response.status === 401 || response.status === 500 || response.status === 402){
                 alert("Email or Password Incorrect")
@@ -49,7 +49,7 @@ const AdminLogin = () => {
             <input className='border-black border rounded-sm px-1 w-[20rem] h-8 text-black py-1' type='password' value={password} onChange={(e) => setpassword(e.target.value)} />
 
             <div className='flex flex-col gap-2 items-center justify-center mt-3'>
-            <button className='w-24 h-10 bg-[rgb(2,6,111)] rounded-lg'>Login</button>
+            <button className=' cursor-pointer text-white w-24 h-10 bg-[rgb(2,6,111)] rounded-lg'>Login</button>
             </div>
        
        

@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import OwnerDetails from '../Components/OwnerDetails';
 import PostAnVehicle from '../Components/PostAnVehicle';
+import Footer from '../Components/Footer';
 
 const VehicleDetails = () => {
 
@@ -226,6 +227,8 @@ const VehicleDetails = () => {
             <PostAnVehicle />
 
             <SimilarVehicles vehName={vehicles.name} vehMake={vehicles.make} />
+
+            <Footer />
         </>
     )
 }
