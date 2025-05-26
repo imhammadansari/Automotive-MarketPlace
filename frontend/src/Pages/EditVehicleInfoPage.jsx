@@ -34,7 +34,7 @@ const EditVehicleInfoPage = () => {
     const getVehDetails = async () => {
 
         try {
-            const response = await axios.get(`http://localhost:8000/vehicles/viewVehicle/${id}`);
+            const response = await axios.get(`https://automotive-marketplace.up.railway.app/vehicles/viewVehicle/${id}`);
             const responseData = response.data;
             console.log(responseData);
             if (responseData) {
@@ -70,7 +70,7 @@ const EditVehicleInfoPage = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(`http://localhost:8000/vehicles/updateVehicle/${id}`, {
+            const response = await axios.post(`https://automotive-marketplace.up.railway.app/vehicles/updateVehicle/${id}`, {
                 name: name,
                 model: model,
                 make: make,

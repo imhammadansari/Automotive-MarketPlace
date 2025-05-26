@@ -15,7 +15,7 @@ const AdminDashboard = () => {
     const getVehDetails = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('http://localhost:8000/vehicles/viewvehicles');
+            const response = await axios.get('https://automotive-marketplace.up.railway.app/vehicles/viewvehicles');
             console.log(response.data);
             setvehicles(response.data);
         } catch (error) {
@@ -29,7 +29,7 @@ const AdminDashboard = () => {
     const updateStatus = async(vehID, vehStatus) => {
         try {
             const newStatus = vehStatus === 'Sold' ? 'Active' : 'Sold';
-            const response = await axios.post(`http://localhost:8000/vehicles/adminUpdateStatus/${vehID}`, {
+            const response = await axios.post(`https://automotive-marketplace.up.railway.app/vehicles/adminUpdateStatus/${vehID}`, {
                 id: vehID,
                 status: newStatus
             })

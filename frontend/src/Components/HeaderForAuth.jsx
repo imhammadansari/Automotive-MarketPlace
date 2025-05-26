@@ -20,7 +20,7 @@ const HeaderForAuth = () => {
   
       const logoutUser = async () => {
           try {
-              const response = await axios.post('http://localhost:8000/users/userLogout');
+              const response = await axios.post('https://automotive-marketplace.up.railway.app/users/userLogout');
               if (response.status === 200) {
                   toast.success("User Loggedout successfully!")
                   setTimeout(() => window.location.reload(), 2000);
@@ -33,7 +33,7 @@ const HeaderForAuth = () => {
   
       const logoutAdmin = async () => {
           try {
-              const response = await axios.post('http://localhost:8000/admin/adminLogout');
+              const response = await axios.post('https://automotive-marketplace.up.railway.app/admin/adminLogout');
               if (response.status === 200) {
                   toast.success("Admin Loggedout successfully!");
                   setTimeout(() => window.location.reload(), 2000);
@@ -69,7 +69,7 @@ const HeaderForAuth = () => {
   useEffect(() => {
           const fetchLoggedInUser = async () => {
               try {
-                  const adminRes = await axios.get(`http://localhost:8000/admin/viewAdmin`);
+                  const adminRes = await axios.get(`https://automotive-marketplace.up.railway.app/admin/viewAdmin`);
                   if (adminRes?.data?._id) {
                       setAdmin(adminRes.data);
                       return;
@@ -77,7 +77,7 @@ const HeaderForAuth = () => {
               } catch (error) {}
   
               try {
-                  const userRes = await axios.get(`http://localhost:8000/users/viewUser`);
+                  const userRes = await axios.get(`https://automotive-marketplace.up.railway.app/users/viewUser`);
                   if (userRes?.data?._id) {
                       setUser(userRes.data);
                       return;

@@ -14,7 +14,7 @@ const AdminLogin = () => {
     const lognDetails = async(e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/admin/adminLogin', {
+            const response = await axios.post('https://automotive-marketplace.up.railway.app/admin/adminLogin', {
                 email: email,
                 password: password
             });

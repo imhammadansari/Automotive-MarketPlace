@@ -13,7 +13,7 @@ const BestCars = () => {
     const fetchVehicles = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('http://localhost:8000/vehicles/viewvehicles');
+            const response = await axios.get('https://automotive-marketplace.up.railway.app/vehicles/viewvehicles');
             setAllVehicles(response.data);
             console.log(response.data)
         } catch (error) {

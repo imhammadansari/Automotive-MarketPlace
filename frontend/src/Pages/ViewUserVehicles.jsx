@@ -17,7 +17,7 @@ const ViewUserVehicles = () => {
   const getVehDetails = async() => {
     try {
       setloading(true);
-      const response = await axios.get(`http://localhost:8000/vehicles/viewVehicle/${id}`);
+      const response = await axios.get(`https://automotive-marketplace.up.railway.app/vehicles/viewVehicle/${id}`);
       console.log(response.data);
       setvehicles(response.data);
     } catch (error) {

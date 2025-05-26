@@ -16,7 +16,7 @@ const SimilarVehicles = ({ vehName, vehMake }) => {
 
     const fetchVehicles = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/vehicles/viewvehicles');
+            const response = await axios.get('https://automotive-marketplace.up.railway.app/vehicles/viewvehicles');
             setVehicles(response.data);
 
         } catch (error) {

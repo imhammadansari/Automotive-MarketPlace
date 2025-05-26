@@ -9,6 +9,7 @@ lerna-debug.log*
 
 # Secret
 .env
+vercel.json
 
 node_modules
 dist

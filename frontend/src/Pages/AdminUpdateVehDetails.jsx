@@ -35,7 +35,7 @@ const AdminUpdateVehDetails = () => {
 
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:8000/vehicles/viewVehicle/${id}`);
+            const response = await axios.get(`https://automotive-marketplace.up.railway.app/vehicles/viewVehicle/${id}`);
             const responseData = response.data;
             console.log(responseData);
             if (responseData) {
@@ -73,7 +73,7 @@ const AdminUpdateVehDetails = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(`http://localhost:8000/vehicles/adminUpdateVehicle/${id}`, {
+            const response = await axios.post(`https://automotive-marketplace.up.railway.app/vehicles/adminUpdateVehicle/${id}`, {
                 name: name,
                 model: model,
                 make: make,
@@ -117,7 +117,7 @@ const AdminUpdateVehDetails = () => {
 
     const deleteVehicle = async() => {
         try {
-            const response = await axios.post(`http://localhost:8000/vehicles/adminDeleteVehicle/${id}`);
+            const response = await axios.post(`https://automotive-marketplace.up.railway.app/vehicles/adminDeleteVehicle/${id}`);
             if(response.status === 200){
                 alert(`Vehicle which was posted by ${ownerName} against the ${response.data._id} has been deleted`);
                 navigate('adminDashboard');

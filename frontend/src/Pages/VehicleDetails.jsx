@@ -24,7 +24,7 @@ const VehicleDetails = () => {
     const fetchVehicles = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:8000/vehicles/viewVehicle/${id}`);
+            const response = await axios.get(`https://automotive-marketplace.up.railway.app/vehicles/viewVehicle/${id}`);
             setVehicles(response.data);
             setCurrentThumbnail(response.data.thumbnail);
             console.log(response.data);

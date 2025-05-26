@@ -14,7 +14,7 @@ const LoginPage = () => {
     const lognDetails = async(e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/users/userLogin', {
+            const response = await axios.post('https://automotive-marketplace.up.railway.app/users/userLogin', {
                 email: email,
                 password: password
             });

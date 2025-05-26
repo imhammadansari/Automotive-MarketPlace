@@ -21,7 +21,7 @@ const AdminSignupPage = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:8000/admin/adminRegister', {
+            const response = await axios.post('https://automotive-marketplace.up.railway.app/admin/adminRegister', {
                 name,
                 email,
                 password
