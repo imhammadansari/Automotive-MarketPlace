@@ -83,5 +83,20 @@ const adminLogout = async function (req, res){
     }
 }
 
-module.exports = { adminRegistered, adminLogin, adminLogout
+const viewAdmin = async function(req, res){
+    try {
+        let adminID = req.admin._id;
+        const admin = await adminModel.findOne(adminID);
+        
+        if(!admin) return res.status(500).send("Admin not found");
+
+        res.status(200).send(admin)
+
+    } catch (error) {
+        res.status(500).send(error.message);        
+
+    }
+}
+
+module.exports = { adminRegistered, adminLogin, adminLogout, viewAdmin
 };

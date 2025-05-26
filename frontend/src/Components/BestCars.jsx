@@ -41,9 +41,9 @@ const BestCars = () => {
                         const isThumbnail = item.thumbnail && item.thumbnail.data;
                         return (
                             <Link className='flex flex-col justify-center items-center' to={`/vehicleDetails/${item._id}`}>
-                                <div key={index} className='flex w-full md:w-[23rem] xl:w-[20rem] h-[28rem] md:h-[25rem] items-center flex-col gap-4 px-4 sm:px-5 md:px-4 lg:px-6 py-4 sm:py-3 md:py-4 lg:py-6 border-4 shadow-lg mb-6 rounded-xl bg-white border-gray-100'>
+                                <div key={index} className='flex w-full md:w-[23rem] xl:w-[20rem] h-auto lg:h-[30rem] xl:h-[25rem] items-center flex-col gap-4 px-4 sm:px-5 md:px-4 lg:px-6 py-4 sm:py-3 md:py-4 lg:py-6 border-4 shadow-lg mb-6 rounded-xl bg-white border-gray-100'>
                                     {isThumbnail ? (
-                                        <img className='w-[12rem] rounded-xl md:w-[8rem]' src={`data:image/jpeg;base64,${Buffer.from(item.thumbnail.data).toString('base64')}`} />
+                                        <img className='w-[100%] rounded-xl md:w-[80%]' src={`data:image/jpeg;base64,${Buffer.from(item.thumbnail.data).toString('base64')}`} />
                                     ) : (
                                         <div>No Thumbnail</div>
                                     )}

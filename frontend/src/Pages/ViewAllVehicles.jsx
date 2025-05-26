@@ -98,7 +98,7 @@ const ViewAllVehicles = () => {
             <Header />
             <div className='flex w-full gap-4 bg-gray-100 px-2 sm:px-3 md:px-6 lg:px-8 py-2 sm:py-3 md:py-4 lg:py-6 items-center justify-center'>
 
-                <div className=' flex flex-col md:flex-row w-full'>
+                <div className='flex flex-col md:flex-row w-full'>
 
                 <div className='hidden md:flex flex-col md:w-1/4 xl:w-1/5 mt-1 mr-1 bg-white rounded-xl'>
                 
@@ -193,7 +193,7 @@ const ViewAllVehicles = () => {
                                 <Link to={`/vehicleDetails/${item._id}`} key={index}>
                                     <div className='flex w-full items-center md:items-start flex-col md:flex-row gap-5 md:gap-10 px-2 sm:px-3 md:px-4 lg:px-6 py-4 sm:py-3 md:py-4 lg:py-6 border-4 shadow-lg mb-6 rounded-xl bg-white border-gray-100'>
                                         {isThumbnail ? (
-                                            <img className='w-[12rem] rounded-xl md:w-[8rem]' src={`data:image/jpeg;base64,${Buffer.from(item.thumbnail.data).toString('base64')}`} />
+                                            <img className='w-[100%] rounded-xl md:w-[22%] lg:w-[22%] xl:w-[18%]' src={`data:image/jpeg;base64,${Buffer.from(item.thumbnail.data).toString('base64')}`} />
                                         ) : (
                                             <div>No Thumbnail</div>
                                         )}

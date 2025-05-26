@@ -30,7 +30,17 @@ const AdminLogin = () => {
                 alert("Something went wrong");
             }
         } catch (error) {
-            console.log(error.message);
+             if (error.response && error.response.status) {
+            if (error.response.status === 400 || error.response.status === 401 || error.response.status === 402) {
+                alert("Email or Password incorrect"); 
+            } else {
+                alert("Something went wrong");
+            }
+        } else {
+            alert("Network Error");
+        }
+
+        console.log(error.message);
             
         }
 

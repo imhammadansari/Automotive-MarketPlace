@@ -14,7 +14,7 @@ const SearchBar = ({searchValue, setsearchValue, onSearch}) => {
 
   return (
     <>
-    <div className='w-full px-2 md:px-4 py-1'>
+    <div className='w-full px-2 md:px-1 py-1'>
         
         <form onSubmit={handleSubmit} className='flex gap-2'>
             <input className='w-7/8 md:w-2/3 border-black border rounded-md px-1 md:p-2' name='value' onChange={(e) => {setsearchValue(e.target.value)}} type='text' placeholder='Search Car' />

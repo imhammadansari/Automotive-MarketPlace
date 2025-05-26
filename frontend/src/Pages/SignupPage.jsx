@@ -32,8 +32,16 @@ const SignupPage = () => {
                 navigate('/login');
             }
         } catch (error) {
-            console.error('Signup error:', error);
-            setError(error.response?.data?.message || 'Registration failed. Please try again.');
+            if (error.response && error.response.status) {
+                        if (error.response.status === 400 ) {
+                            toast.error("User Already exists"); 
+                        }
+                    } else {
+                        toast.error("Network Error");
+                    }
+            
+                    console.log(error.message);
+        
         }
     }
 

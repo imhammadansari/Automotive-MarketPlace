@@ -4,7 +4,7 @@ const adminModel = require('../models/adminModel');
 
 module.exports = async function (req, res, next){
     if(!req.cookies.token){
-        res.status(200).send("Admin must be loggedIn!");
+        return res.status(200).send("Admin must be loggedIn!");
     }
 
     try {

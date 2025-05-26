@@ -83,8 +83,24 @@ const logoutUser = async function (req, res){
     }
 }
 
+const viewUser = async function(req, res){
+    try {
+        let userID = req.user._id;
+        const user = await usersModel.findOne(userID);
+        
+        if(!user) return res.status(500).send("User not found");
+
+        res.status(200).send(user)
+
+    } catch (error) {
+        res.status(500).send(error.message);        
+
+    }
+}
+
 module.exports = {
     registerUser,
     loginUser,
+    viewUser,
     logoutUser
 };
