@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import MenuBar from './MenuBar';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
 
 const MenuBar = ({ hideMenu }) => {
 
   const [user, setUser] = useState('');
   const [admin, setAdmin] = useState('');
+  
 
 
   const logoutUser = async () => {
