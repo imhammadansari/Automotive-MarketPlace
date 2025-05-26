@@ -102,10 +102,9 @@ const HeaderForAuth = () => {
 
         <div>
             <ul className='hidden md:flex gap-10 text-lg'>
-                <li><a src="/home">Home</a></li>
-                <li><a src="/home">About Us</a></li>
-                <li><a src="/home">Vehicles</a></li>
-                <li><a src="/home">Contact Us</a></li>
+                <li><Link to="/home">Home</Link></li>
+                                <li><Link to='/sellYourCar'>Sell Your Car</Link></li>
+                                <li><Link to='/viewVehicles'>Buy Car</Link></li>
                 <li>
                             {(user?._id || admin?._id) ? (
                                 <select className='w-24' onChange={handleAccountNavigation} defaultValue="">
