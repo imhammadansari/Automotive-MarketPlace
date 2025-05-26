@@ -1,5 +1,4 @@
 import React from 'react'
-import MenuBar from './MenuBar';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
