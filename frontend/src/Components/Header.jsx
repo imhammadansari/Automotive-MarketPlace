@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import MenuBar from './MenuBar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 const Header = () => {
+    const navigate = useNavigate();
+
     const [menu, setMenu] = useState(false);
     const [user, setUser] = useState('');
     const [admin, setAdmin] = useState('');

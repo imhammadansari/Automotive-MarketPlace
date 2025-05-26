@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
 
 const MenuBar = ({ hideMenu }) => {
+  const navigate = useNavigate();
 
   const [user, setUser] = useState('');
   const [admin, setAdmin] = useState('');
