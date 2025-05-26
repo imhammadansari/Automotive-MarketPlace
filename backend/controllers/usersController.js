@@ -5,77 +5,89 @@ const usersModel = require('../models/usersModel');
 const registerUser = async function (req, res) {
 
     try {
-        let {name, email, password} = req.body;
-        let user = await usersModel.findOne({email});
+        let { name, email, password } = req.body;
+        let user = await usersModel.findOne({ email });
 
-        if(user) return res.status(400).send("User already exist");
+        if (user) return res.status(400).send("User already exist");
 
-        bcrypt.genSalt(10, function (error, salt){
-            bcrypt.hash(password, salt, async function(error, hash){
+        bcrypt.genSalt(10, function (error, salt) {
+            bcrypt.hash(password, salt, async function (error, hash) {
 
-                if(error) return res.send(error.mesage);
+                if (error) return res.send(error.mesage);
 
-                else{
+                else {
                     let user = await usersModel.create({
                         name,
                         email,
                         password: hash
                     })
 
-                    let token = jwt.sign({email: user.email, _id: user._id}, process.env.JWT_KEY);
+                    let token = jwt.sign({ email: user.email, _id: user._id }, process.env.JWT_KEY);
 
-                    res.cookie("token", token);
+                    res.cookie("token", token, {
+                        httpOnly: true,
+                        secure: true,
+                        sameSite: 'None'
+                    });
                     res.status(200).send("User Created Successfully");
                 }
             })
         })
     } catch (error) {
         res.status(500).send(error.message);
-        
+
     }
-    
+
 }
 
-const loginUser = async function (req, res){
+const loginUser = async function (req, res) {
     try {
-        let {email, password} = req.body;
+        let { email, password } = req.body;
 
         if (!email || !password) {
             return res.status(400).send("Email and password are required");
         }
 
         let user = await usersModel.findOne({ email });
-        
+
         if (!user) {
             return res.status(404).send("User not found");
         }
 
-        bcrypt.compare(password, user.password, async function (error, result){
+        bcrypt.compare(password, user.password, async function (error, result) {
             if (error) {
                 return res.status(500).send("Error comparing passwords");
             }
-            
+
             if (!result) {
                 return res.status(401).send("Invalid credentials");
             }
 
-                const token = jwt.sign({email: user.email, _id: user._id}, process.env.JWT_KEY);
+            const token = jwt.sign({ email: user.email, _id: user._id }, process.env.JWT_KEY);
 
-                res.cookie("token", token);
-                res.status(200).send("User Loggedin Successfully");
+            res.cookie("token", token, {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'None'
+            });
+            res.status(200).send("User Loggedin Successfully");
         })
     } catch (error) {
         res.status(500).send(error.message);
     }
 }
 
-const logoutUser = async function (req, res){
+const logoutUser = async function (req, res) {
     try {
-        if(req.cookies.token){
-            res.clearCookie("token");
+        if (req.cookies.token) {
+            res.clearCookie("token"), {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'None'
+            };
             res.status(200).send("User Loggedout");
         }
-        else{
+        else {
             res.status(500).sned("Something went wrong");
         }
     } catch (error) {
@@ -83,17 +95,17 @@ const logoutUser = async function (req, res){
     }
 }
 
-const viewUser = async function(req, res){
+const viewUser = async function (req, res) {
     try {
         let userID = req.user._id;
-        const user = await usersModel.findOne(userID);
-        
-        if(!user) return res.status(500).send("User not found");
+        const user = await usersModel.findOne(userID).select("-password");
+
+        if (!user) return res.status(500).send("User not found");
 
         res.status(200).send(user)
 
     } catch (error) {
-        res.status(500).send(error.message);        
+        res.status(500).send(error.message);
 
     }
 }

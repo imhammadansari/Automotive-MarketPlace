@@ -25,7 +25,11 @@ const adminRegistered = async function (req, res){
                     })
 
                     let token = jwt.sign({email: admin.email, _id: admin._id}, process.env.ADMIN_KEY);
-                    res.cookie("token", token);
+                    res.cookie("token", token, {
+                        httpOnly: true,
+                        secure: true,
+                        sameSite: 'None'
+                    });
                     res.status(200).send("Admin Created Successfully");
                 }
 
@@ -60,7 +64,11 @@ const adminLogin = async function (req, res){
             }
 
             let token = jwt.sign({email: admin.email, _id: admin._id}, process.env.ADMIN_KEY);
-            res.cookie("token", token);
+            res.cookie("token", token, {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'None'
+            });
             res.status(200).send("Admin Loggedin");
         })
     } catch (error) {
@@ -72,7 +80,11 @@ const adminLogin = async function (req, res){
 const adminLogout = async function (req, res){
     try {
         if(req.cookies.token){
-            res.clearCookie("token");
+            res.clearCookie("token", {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'None'
+            });
             res.status(200).send("Admin Logout");
         } else {
             res.send("Something went wrong");
@@ -86,7 +98,7 @@ const adminLogout = async function (req, res){
 const viewAdmin = async function(req, res){
     try {
         let adminID = req.admin._id;
-        const admin = await adminModel.findOne(adminID);
+        const admin = await adminModel.findOne(adminID).select("-password");
         
         if(!admin) return res.status(500).send("Admin not found");
 
