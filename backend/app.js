@@ -13,7 +13,7 @@ const vehicleRoute = require('./routes/vehicleRoute');
 const adminRoute = require('./routes/adminRoute');
 
 app.use(cors({
-    origin: "https://automotive-market-place.vercel.app/home",
+    origin: "https://automotive-market-place.vercel.app",
     credentials: true
 }))
 
