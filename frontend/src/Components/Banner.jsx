@@ -1,4 +1,7 @@
 import React from 'react'
+import {LazyLoadImage} from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css'
+import sellCar from '../assets/images/sell-car-banner.jpg'
 
 const Banner = () => {
   return (
@@ -24,12 +27,12 @@ const Banner = () => {
         <div className='w-full md:w-1/2 h-full flex gap-6 items-center'>
 
         <div className='flex flex-col gap-4'>
-          <img className='w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src='/inspect-car-banner.jpg' />
-          <img className='w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src='/sell-car-banner.jpg' />
+          <LazyLoadImage className='w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src='/inspect-car-banner.jpg' effect='blur' loading='lazzy'/>
+          <LazyLoadImage className='w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src={sellCar} loading='lazzy' effect='blur' />
         </div>
 
         <div>
-        <img className='w-[22rem] md:w-[22rem] lg:w-[20rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src='/third-banner.jpg' />
+        <LazyLoadImage className='w-[22rem] md:w-[22rem] lg:w-[20rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' effect='blur' src='/third-banner.jpg' loading='lazzy' />
         </div>
 
         </div>
