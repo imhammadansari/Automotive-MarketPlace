@@ -24,15 +24,15 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className='w-full md:w-1/2 h-full flex gap-6 items-center'>
+        <div className='w-full md:w-1/2 h-full flex gap-6 items-center' loading='lazy'>
 
         <div className='flex flex-col gap-4'>
-          <LazyLoadImage className='w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src='/inspect-car-banner.jpg' effect='blur' loading='lazzy'/>
-          <LazyLoadImage className='w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src={sellCar} loading='lazzy' effect='blur' />
+          <LazyLoadImage className='w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src='/inspect-car-banner.jpg' effect='blur' loading='lazy'/>
+          <LazyLoadImage className='w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src={sellCar} loading='lazy' effect='blur' />
         </div>
 
         <div>
-        <LazyLoadImage className='w-[22rem] md:w-[22rem] lg:w-[20rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' effect='blur' src='/third-banner.jpg' loading='lazzy' />
+        <LazyLoadImage className='w-[22rem] md:w-[22rem] lg:w-[20rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' effect='blur' src='/third-banner.jpg' loading='lazy' />
         </div>
 
         </div>
