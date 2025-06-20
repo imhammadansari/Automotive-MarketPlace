@@ -1,13 +1,9 @@
 import React from 'react'
 import {LazyLoadImage} from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'
-import sellCar from '../assets/images/sell-car-banner.jpg';
-import Shimmer from 'react-shimmer-effect';
+import sellCar from '../assets/images/sell-car-banner.jpg'
 
 const Banner = () => {
-  const [img1Loaded, setImg1Loaded] = useState(false);
-  const [img2Loaded, setImg2Loaded] = useState(false);
-  const [img3Loaded, setImg3Loaded] = useState(false);
   return (
     // <div className='w-full h-[90vh] bg-cover relative overflow-hidden' 
     //      style={{backgroundImage: "url('/banner.jpg')"}}>
@@ -31,44 +27,13 @@ const Banner = () => {
         <div className='w-full md:w-1/2 h-full flex gap-6 items-center' loading='lazy'>
 
         <div className='flex flex-col gap-4'>
-            {!img1Loaded && (
-              <Shimmer>
-                <div className="w-[21rem] h-[14rem] rounded-xl bg-gray-300" />
-              </Shimmer>
-            )}
-            <LazyLoadImage
-              className={`w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img1Loaded ? 'block' : 'hidden'}`}
-              src='/inspect-car-banner.jpg'
-              effect='blur'
-              afterLoad={() => setImg1Loaded(true)}
-            />
+          <LazyLoadImage className='w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src='/inspect-car-banner.jpg' effect='blur' loading='lazy'/>
+          <LazyLoadImage className='w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' src={sellCar} loading='lazy' effect='blur' />
+        </div>
 
-            {!img2Loaded && (
-              <Shimmer>
-                <div className="w-[21rem] h-[14rem] rounded-xl bg-gray-300" />
-              </Shimmer>
-            )}
-            <LazyLoadImage
-              className={`w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img2Loaded ? 'block' : 'hidden'}`}
-              src={sellCar}
-              effect='blur'
-              afterLoad={() => setImg2Loaded(true)}
-            />
-          </div>
-
-          <div>
-            {!img3Loaded && (
-              <Shimmer>
-                <div className="w-[22rem] h-[14rem] rounded-xl bg-gray-300" />
-              </Shimmer>
-            )}
-            <LazyLoadImage
-              className={`w-[22rem] md:w-[22rem] lg:w-[20rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img3Loaded ? 'block' : 'hidden'}`}
-              src='/third-banner.jpg'
-              effect='blur'
-              afterLoad={() => setImg3Loaded(true)}
-            />
-          </div>
+        <div>
+        <LazyLoadImage className='w-[22rem] md:w-[22rem] lg:w-[20rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]' effect='blur' src='/third-banner.jpg' loading='lazy' />
+        </div>
 
         </div>
       </div>
