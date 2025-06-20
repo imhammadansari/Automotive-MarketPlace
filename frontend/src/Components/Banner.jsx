@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import {LazyLoadImage} from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import sellCar from '../assets/images/sell-car-banner.jpg';
-import { ShimmerSimpleGallery } from 'react-shimmer-effects';
+import { ShimmerPostItem } from 'react-shimmer-effects';
+
 
 const Banner = () => {
   const [img1Loaded, setImg1Loaded] = useState(false);
@@ -32,7 +33,14 @@ const Banner = () => {
 
         <div className='flex flex-col gap-4'>
             {!img1Loaded && (
-  <ShimmerSimpleGallery card imageHeight={224} caption />
+  <ShimmerPostItem
+  card
+  title
+  cta
+  imageType="thumbnail"
+  imageWidth={336} // 21rem = 336px
+  imageHeight={224} // 14rem = 224px
+/>
 )}
             <LazyLoadImage
               className={`w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img1Loaded ? 'block' : 'hidden'}`}
@@ -42,7 +50,14 @@ const Banner = () => {
             />
 
             {!img1Loaded && (
-  <ShimmerSimpleGallery card imageHeight={224} caption />
+  <ShimmerPostItem
+  card
+  title
+  cta
+  imageType="thumbnail"
+  imageWidth={336} // 21rem = 336px
+  imageHeight={224} // 14rem = 224px
+/>
 )}
             <LazyLoadImage
               className={`w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img2Loaded ? 'block' : 'hidden'}`}
@@ -54,7 +69,15 @@ const Banner = () => {
 
           <div>
             {!img1Loaded && (
-  <ShimmerSimpleGallery card imageHeight={224} caption />
+ <ShimmerPostItem
+  card
+  title
+  cta
+  imageType="thumbnail"
+  imageWidth={352} // 22rem = 352px
+  imageHeight={224} // 14rem = 224px
+/>
+
 )}
             <LazyLoadImage
               className={`w-[22rem] md:w-[22rem] lg:w-[20rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img3Loaded ? 'block' : 'hidden'}`}
