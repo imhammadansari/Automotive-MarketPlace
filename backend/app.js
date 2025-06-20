@@ -8,14 +8,14 @@ const app = express();
 
 dotenv.config();
 
-const userRoute = require('./routes/userRoute');
-const vehicleRoute = require('./routes/vehicleRoute');
-const adminRoute = require('./routes/adminRoute');
-
 app.use(cors({
     origin: "https://automotive-market-place.vercel.app",
     credentials: true
 }))
+const userRoute = require('./routes/userRoute');
+const vehicleRoute = require('./routes/vehicleRoute');
+const adminRoute = require('./routes/adminRoute');
+
 
 const PORT = process.env.PORT || 8000;
 const URL = process.env.MONGODB_URL;
