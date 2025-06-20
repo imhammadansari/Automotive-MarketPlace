@@ -33,13 +33,7 @@ const Banner = () => {
 
         <div className='flex flex-col gap-4'>
             {!img1Loaded && (
-  <ShimmerPostItem
-  card
-imageOnly 
-  imageType="thumbnail"
-  imageWidth={130} // 21rem = 336px
-  imageHeight={224}
-/>
+  <div className="w-[21rem] h-[14rem] bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]" />
 )}
             <LazyLoadImage
               className={`w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img1Loaded ? 'block' : 'hidden'}`}
@@ -48,14 +42,8 @@ imageOnly
               afterLoad={() => setImg1Loaded(true)}
             />
 
-            {!img1Loaded && (
-  <ShimmerPostItem
-  card
- imageOnly 
-  imageType="thumbnail"
-  imageWidth={130} // 21rem = 336px
-  imageHeight={224}
-/>
+            {!img2Loaded && (
+  <div className="w-[21rem] h-[14rem] bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]" />
 )}
             <LazyLoadImage
               className={`w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img2Loaded ? 'block' : 'hidden'}`}
@@ -66,15 +54,8 @@ imageOnly
           </div>
 
           <div>
-            {!img1Loaded && (
- <ShimmerPostItem
-  card
- imageOnly 
-  imageType="thumbnail"
-  imageWidth={150} // 22rem = 352px
-  imageHeight={224}
-/>
-
+           {!img3Loaded && (
+  <div className="w-[22rem] h-[14rem] bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]" />
 )}
             <LazyLoadImage
               className={`w-[22rem] md:w-[22rem] lg:w-[20rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img3Loaded ? 'block' : 'hidden'}`}
