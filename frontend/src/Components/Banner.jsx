@@ -55,7 +55,7 @@ const Banner = () => {
 
           <div>
            {!img3Loaded && (
-  <div className="w-[15rem] md:w-[22rem] lg:w-[20rem] h-[7rem] lg:h-[20rem] bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]" />
+  <div className="w-[15rem] md:w-[22rem] lg:w-[20rem] h-[15rem] lg:h-[20rem] bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)]" />
 )}
             <LazyLoadImage
               className={`w-[22rem] md:w-[22rem] lg:w-[20rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img3Loaded ? 'block' : 'hidden'}`}
