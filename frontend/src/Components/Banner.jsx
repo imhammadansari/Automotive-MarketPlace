@@ -38,7 +38,7 @@ const Banner = () => {
   title
   cta
   imageType="thumbnail"
-  imageWidth={336} // 21rem = 336px
+  imageWidth={230} // 21rem = 336px
 />
 )}
             <LazyLoadImage
@@ -54,7 +54,7 @@ const Banner = () => {
   title
   cta
   imageType="thumbnail"
-  imageWidth={336} // 21rem = 336px
+  imageWidth={230} // 21rem = 336px
 />
 )}
             <LazyLoadImage
@@ -72,7 +72,7 @@ const Banner = () => {
   title
   cta
   imageType="thumbnail"
-  imageWidth={352} // 22rem = 352px
+  imageWidth={250} // 22rem = 352px
 />
 
 )}
