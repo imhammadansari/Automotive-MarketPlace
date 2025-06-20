@@ -38,6 +38,7 @@ const Banner = () => {
 imageOnly 
   imageType="thumbnail"
   imageWidth={130} // 21rem = 336px
+  imageHeight={224}
 />
 )}
             <LazyLoadImage
@@ -53,6 +54,7 @@ imageOnly
  imageOnly 
   imageType="thumbnail"
   imageWidth={130} // 21rem = 336px
+  imageHeight={224}
 />
 )}
             <LazyLoadImage
@@ -70,6 +72,7 @@ imageOnly
  imageOnly 
   imageType="thumbnail"
   imageWidth={150} // 22rem = 352px
+  imageHeight={224}
 />
 
 )}
