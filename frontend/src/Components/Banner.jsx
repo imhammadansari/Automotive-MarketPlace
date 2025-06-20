@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react';
 import {LazyLoadImage} from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import sellCar from '../assets/images/sell-car-banner.jpg';
-import Shimmer from 'react-shimmer-effect';
+import { ShimmerSimpleGallery } from 'react-shimmer-effects';
 
 const Banner = () => {
   const [img1Loaded, setImg1Loaded] = useState(false);
@@ -32,10 +32,8 @@ const Banner = () => {
 
         <div className='flex flex-col gap-4'>
             {!img1Loaded && (
-              <Shimmer>
-                <div className="w-[21rem] h-[14rem] rounded-xl bg-gray-300" />
-              </Shimmer>
-            )}
+  <ShimmerSimpleGallery card imageHeight={224} caption />
+)}
             <LazyLoadImage
               className={`w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img1Loaded ? 'block' : 'hidden'}`}
               src='/inspect-car-banner.jpg'
@@ -43,11 +41,9 @@ const Banner = () => {
               afterLoad={() => setImg1Loaded(true)}
             />
 
-            {!img2Loaded && (
-              <Shimmer>
-                <div className="w-[21rem] h-[14rem] rounded-xl bg-gray-300" />
-              </Shimmer>
-            )}
+            {!img1Loaded && (
+  <ShimmerSimpleGallery card imageHeight={224} caption />
+)}
             <LazyLoadImage
               className={`w-[21rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img2Loaded ? 'block' : 'hidden'}`}
               src={sellCar}
@@ -57,11 +53,9 @@ const Banner = () => {
           </div>
 
           <div>
-            {!img3Loaded && (
-              <Shimmer>
-                <div className="w-[22rem] h-[14rem] rounded-xl bg-gray-300" />
-              </Shimmer>
-            )}
+            {!img1Loaded && (
+  <ShimmerSimpleGallery card imageHeight={224} caption />
+)}
             <LazyLoadImage
               className={`w-[22rem] md:w-[22rem] lg:w-[20rem] rounded-xl shadow-[8px_0_4px_0_rgb(2,6,111)] ${img3Loaded ? 'block' : 'hidden'}`}
               src='/third-banner.jpg'
